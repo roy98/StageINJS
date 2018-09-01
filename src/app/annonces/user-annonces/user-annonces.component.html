@@ -1,0 +1,6 @@
+
+<ul class="collection">
+    <app-user-annonces-view *ngFor="let annonce of userAnnonces" 
+    [titre]="annonce.titre" [ville]="annonce.ville" [id]="annonce.id" [isUserAnnonce]="isUserAnnonce" >
+  </app-user-annonces-view>
+  </ul>

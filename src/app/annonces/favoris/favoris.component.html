@@ -1,0 +1,5 @@
+<ul class="collection">
+    <app-user-annonces-view *ngFor="let annonce of favoris" 
+    [titre]="annonce.titre" [ville]="annonce.ville" [id]="annonce.id" [isUserFavoris]="isUserFavoris" >
+  </app-user-annonces-view>
+  </ul>

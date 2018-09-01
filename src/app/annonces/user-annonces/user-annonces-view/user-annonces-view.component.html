@@ -1,0 +1,9 @@
+<li class="collection-item avatar">
+    <img src="../../../../assets/parralax.jpg" alt="" class="circle">
+    <span class="title"><strong>{{titre}}</strong></span>
+    <p>{{ville}}<br>
+      <a [routerLink]="[id]"> <i class="material-icons">more_vert</i> </a>
+    </p>
+    <a (click)="onDeleteAnnonce()" *ngIf="isUserAnnonce===true" class="secondary-content"><i class="material-icons">delete_forever</i></a>
+    <a (click)="onDeleteFavoris()" *ngIf="isUserFavoris===true" class="secondary-content"><i class="material-icons">star_border</i></a>
+  </li>

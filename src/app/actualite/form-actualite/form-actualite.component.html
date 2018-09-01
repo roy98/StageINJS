@@ -1,0 +1,23 @@
+<div class="row white">
+    <form [formGroup]= "actusForm"  (ngSubmit)="onSubmit()" class="col s12" >
+      <div class="row">
+        <div class="input-field col s7">
+            <span class="card-title center-align">Ajouter une Actus</span>
+          <i class="material-icons prefix">title</i>
+          <input id="titre" type="text" class="validate" formControlName="titre">
+          <label for="titre">Titre</label>
+        </div>
+        <div class="input-field col s7">
+            <i class="material-icons prefix">textsms</i>
+            <textarea id="content" class="materialize-textarea" formControlName="contenu"></textarea>
+            <label for="content">Détails</label>
+        </div>
+      </div>
+      <p [ngClass]="{'red-text text-darken-2': error}" class=" col s8 m8 offset-m2 offset-s2 center-align">{{error}}</p>
+      <p [ngClass]="{' green-text text-darken-2': success}" class=" col s8 m8 offset-m2 offset-s2 center-align">{{success}}</p>
+      <div>
+          <button class="col m7 s12 btn waves-effect waves-light" type="submit" [disabled]="actusForm.invalid">
+            <i class="material-icons right">send</i>Ajouter</button>
+        </div>
+    </form>
+  </div>

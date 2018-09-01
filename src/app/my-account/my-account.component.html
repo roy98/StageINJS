@@ -1,0 +1,40 @@
+<div style="height: 186px;">
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <div class="row center">
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax" ><img src="../../assets/parralax.jpg" alt="Unsplashed background img 1" ></div>
+  </div>
+</div>
+<nav class="white container">
+    <div class="nav-wrapper">
+      <ul class="left hide-on-med-and-down">
+        <li routerLinkActive="active"><a routerLink="annonces" >Mes Annonces</a></li>
+        <li routerLinkActive="active"><a routerLink="favoris" >Annonces Favorites</a></li>
+        <li routerLinkActive="active"><a routerLink="prive" >Mes Informations</a></li>
+        <li routerLinkActive="active"><a class="tabclick" routerLink="admin" >Administration</a></li>
+      </ul>
+      <form class="right">
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons" style="color: black">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+        <ul id="nav-mobile-account" class="sidenav">
+            <li routerLinkActive="active"><a routerLink="annonces" >Mes Annonces<i class="material-icons">image</i></a></li>
+            <li routerLinkActive="active"><a routerLink="favoris" >Annonces Favorites<i class="material-icons">stars</i></a></li>
+            <li routerLinkActive="active"><a routerLink="prive" >Mes Informations<i class="material-icons">person_pin</i></a></li>
+            <li routerLinkActive="active"><a class="tabclick" routerLink="admin" >Administration<i class="material-icons">phonelink_setup</i></a></li>
+          </ul>
+          <a routerLink="/app/home" data-target="nav-mobile-account" class="sidenav-trigger"><i class="material-icons">more_vert</i></a>
+    </div>
+    </nav>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>

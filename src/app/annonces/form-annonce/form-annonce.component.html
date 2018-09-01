@@ -1,0 +1,60 @@
+<div class="container">
+<div class="row">
+<div class="col s12 m9 offset-m2 ">
+        <div class="card-panel  z-depth-2">
+          <h4 class="header center-align ">Créer une annonce de location</h4><hr> <br>
+          <div class="row">
+            <form [formGroup]="annonceForm" (ngSubmit)="onSubmit()" class="col s12">
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <i class="material-icons prefix">title</i>
+                  <input id="name4" type="text" class="validate" formControlName="titre">
+                  <label for="first_name">Titre</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">monetization_on</i>
+                    <input id="prix" type="text" class="validate" formControlName="prix">
+                    <label for="prix">Montant</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <i class="material-icons prefix">public</i>
+                  <input id="region" type="text" class="validate" formControlName="region">
+                  <label for="region">Région</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">location_city</i>
+                    <input id="ville" type="text" class="validate" formControlName="ville">
+                    <label for="ville">Ville</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class=" material-icons prefix">chat</i>
+                  <textarea id="detail" class="materialize-textarea validate" length="120" formControlName="details"></textarea>
+                  <label for="detail">Détails</label>
+                </div>
+                <div class="file-field input-field col s12 m6">
+                        <div class="btn">
+                          <span>Photo</span>
+                          <input type="file" formControlName="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text">
+                        </div>
+                      </div>
+                <div class="row col s12 m12">
+                  <div class="input-field col s12 m12">
+                    <button class="btn cyan waves-effect waves-light" [disabled]="annonceForm.invalid" type="submit">Submit
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

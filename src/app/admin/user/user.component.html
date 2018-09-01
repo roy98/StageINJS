@@ -1,0 +1,18 @@
+<table id="example" class="mdl-data-table" style="width:100%">
+    <thead>
+        <tr>
+            <th class="center-align">Nom</th>
+            <th class="center-align">Prénom</th>
+            <th class="center-align">Email</th>
+            <th class="right-align">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of data">
+            <td class="center-align">{{user.nom}}</td>
+            <td class="center-align">{{user.prenom}}</td>
+            <td class="center-align">{{user.email}}</td>
+            <td class="right"><p (click)="onDeleteUser(user.id)" style="cursor: pointer"><i class="material-icons" style="color:brown"> delete_forever</i></p></td>
+        </tr>
+    </tbody>
+</table>

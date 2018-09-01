@@ -1,0 +1,48 @@
+<div class="">
+    <div class="row">
+        <div class="col s12 m6 offset-m3">
+          <div class="card white z-depth-3">
+            <div class="card-content black-text">
+              <span class="card-title center-align">Modifier Mes Informations</span>
+              <div class="row">
+                  <form [formGroup]= "updateUserForm" (ngSubmit)="onSubmit()" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">person_pin</i>
+                            <input id="nom" type="text" class="validate" minlength="3" maxlength="12" formControlName="nom">
+                            <label for="nom">Nom</label>
+                            <span class="helper-text" data-error="3 caractère minimum" data-success="Correct">*</span>
+                          </div>
+                          <div class="input-field col s12">
+                              <i class="material-icons prefix">person</i>
+                              <input id="prenom" type="text" class="validate" minlength="3" maxlength="12" formControlName="prenom">
+                              <label for="prenom">Prénom</label>
+                              <span class="helper-text" data-error="3 caractère minimum" data-success="Correct">*</span>
+                            </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="email" class="validate" formControlName="email">
+                                <label for="email">Email</label>
+                                <span class="helper-text" data-error="Email invalide" data-success="Correct email">*</span>
+                              </div>
+                              <div class="input-field col s12">
+                                  <i class="material-icons prefix">lock</i>
+                                  <input id="password" type="password" class="validate" minlength="6" formControlName="password">
+                                  <label for="password">Password</label>
+                                  <span class="helper-text" data-error="password invalide" data-success="Correct password" >*</span>
+                                </div>
+                      <p [ngClass]="{'red-text text-darken-2': error}" class=" col s8 m8 offset-m2 offset-s2 center-align">{{error}}</p>
+                      <p [ngClass]="{' green-text text-darken-2': success}" class=" col s8 m8 offset-m2 offset-s2 center-align">{{success}}</p>
+                    </div>
+                    <div class="row card-action">
+                        <button class="col m8 s12 offset-m2 btn waves-effect waves-light" type="submit" [disabled]="updateUserForm.invalid">
+                          <i class="material-icons right">send</i>Modifier</button>
+                      </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  

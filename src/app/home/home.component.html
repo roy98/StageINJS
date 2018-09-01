@@ -1,0 +1,62 @@
+<!--Parralax-->
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2"> Economie Agricole</h1>
+        <div class="row center transparent z-depth-0" style="width: 70%;" >
+            <nav class="white">
+                <div class="nav-wrapper">
+                  <form>
+                    <div class="input-field">
+                      <input id="search" type="search" required>
+                      <label class="label-icon" for="search"><i class="material-icons" style="color:black">search</i></label>
+                      <i class="material-icons">close</i>
+                    </div>
+                  </form>
+                </div>
+              </nav>
+        </div>
+        <br><br>
+      </div>
+    </div>
+    <div class="parallax"><img src="../../assets/parralax.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+<div class="container-fluide">
+  <div class="section">
+      <div class="row">
+        <!-- container pour la demande d'investissement et des actualitées-->
+    <div class="col s12 m3 offset-m1">
+      <div class="row">
+        <!--Card investissement-->
+        <div class="card col s12 m12 small">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="../../assets/office.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><i class="material-icons left">account_balance</i>Demande d'investissement<i class="material-icons right">more_vert</i></span>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Comment ?<i class="material-icons right">close</i></span>
+              <p>Here we have some information about the invest</p>
+            </div>
+          </div>
+          <!--Card Actualité-->
+              <div class="col s12 m12">
+                <app-actualite [titre]="lastActus.titre" [contenu]="lastActus.contenu" ></app-actualite>
+              </div>
+                     
+        </div>
+    </div>
+    <!-- Container des annonces-->
+        <div class="col s12 m6 offset-m1">
+          <div class="row">
+            <app-annonces *ngFor="let annonce of allAnnonces"
+           [titre]="annonce.titre" [ville]="annonce.ville" [id]="annonce.id" ></app-annonces>
+      </div>
+    </div>
+    </div>
+  </div>
+
+    </div>
+    
